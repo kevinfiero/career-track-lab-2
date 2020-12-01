@@ -1,14 +1,14 @@
 const capitalizeAndFilter = pokemon => {
-    const length = pokemon.length;
-    let i = length-1;
-    console.log(length);
-    for(i; i>=0; i--){
-        pokemon[i] = pokemon[i].charAt(0).toUpperCase() + pokemon[i].slice(1);
-        if(pokemon[i].charAt(0)==='F'){
-            pokemon.splice(i, 1)
-        }
-    }
-    return pokemon;
+    
+    let result = pokemon.map(val => {
+        return val.charAt(0).toUpperCase() + val.slice(1);
+    });
+
+    result = result.filter(val => {
+        return val.charAt(0)!=='F'
+    });
+
+    return result;
 }
 
 module.exports = {
