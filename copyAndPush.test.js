@@ -7,8 +7,4 @@ describe('copyAndPush function', () => {
         const result = copyAndPush(numbers, 4)
         expect(result).toEqual(expected)
     })
-
-
-
-
 });
